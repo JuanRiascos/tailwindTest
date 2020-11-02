@@ -1,0 +1,7 @@
+.modal__close {
+	top: -0.7em;
+	right: -0.7em;
+}
+.modal__container{
+  max-width: 20rem;
+}

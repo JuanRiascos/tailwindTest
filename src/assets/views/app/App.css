@@ -1,0 +1,8 @@
+.animation-up {
+	animation: up 1.3s ease-in-out 0s;
+}
+
+.button__helped {
+	bottom: 1em;
+	right: 1em;
+}

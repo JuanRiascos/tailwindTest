@@ -1,0 +1,14 @@
+@keyframes up {
+	from {
+		bottom: -160vh;
+	}
+	to {
+		bottom: 0;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.modal__container{
+		max-width: 18rem !important;
+	}
+}
