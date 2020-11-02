@@ -7,7 +7,7 @@ export const dummy = {
 		},
 		{
 			id: 2,
-			name: 'Consegui otro tecnico',
+			name: 'Conseguí otro tecnico',
 			isSelect: false,
 		},
 		{

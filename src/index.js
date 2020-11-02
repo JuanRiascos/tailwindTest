@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import './assets/css/main.css'
 import './assets/css/vendors/main.css'
 import App from './assets/views/app/App'
-import initStore from './store/Store'
+import initStore from './redux/store/Store'
 export const history = createBrowserHistory()
 export const store = initStore(history)
 

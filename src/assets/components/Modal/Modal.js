@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useDispatch, useSelector } from 'react-redux'
-import { question } from '../../../services/Question/Actions'
+import { question } from '../../../redux/services/Question/Actions'
 
 import Banner from '../../image/banner.png'
 import Question from './components/Question'
@@ -36,13 +36,14 @@ const Index = ({ title, subTitle, setActive }) => {
 	}
 
 	const _handleCancel = () => {
-		const canSelected = canQuestions.filter((item) => item.isSelect === true)
-		if (canSelected.length === 0) {
-			setMessage('Error', 'Por favor debe de seleccionar un motivo', 'error')
+		const canSelected = canQuestions.find((item) => item.isSelect === true)
+		console.log(canSelected)
+		if (canSelected) {
+			setMessage('Alerta', 'Gracias por utilizar nuestro servicio, ha seleccionado la siguiente causa: '+canSelected.name, 'info')
+			setActive(false)
 			return
 		}
-		setMessage('Alerta', 'Gracias por utilizar nuestro servicio', 'info')
-		setActive(false)
+		setMessage('Error', 'Por favor debe de seleccionar un motivo', 'error')
 	}
 
 	useEffect(() => {

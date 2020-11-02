@@ -1,6 +1,6 @@
 import { takeLatest, all, put } from 'redux-saga/effects'
 import { question } from './Actions'
-import {dummy} from '../../common/utils/Dummy'
+import {dummy} from '../../../common/utils/Dummy'
 
 
 function* getAll() {
